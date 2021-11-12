@@ -1,0 +1,26 @@
+@use "../../Assets/sass/_variables.scss" as *;
+
+.beerCard{
+    border: 2px solid $color-black;
+    height : 215px;
+    width: 215px;
+    padding: 5px 5px;
+    margin: 10px 10px;
+    font-size: 15px;
+    font-family: "poppins";
+    
+    &__img{
+        // transform: scale(0.3,0.3);
+        height: 150px;
+        width: 100px;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title{
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,16 @@
+@use "../../assets/sass/_variables.scss" as *;
+
+.sideMenu__searchbox{
+    margin: 0;
+    padding: 5px;
+    font-size: 15px;
+    border: 5px $color-primary solid;
+    border-radius: 15px;
+    color: $color-primary;
+
+    &:focus {
+      border: 5px $color-primary solid;
+      outline: none;
+    }
+
+}

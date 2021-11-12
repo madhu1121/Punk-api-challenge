@@ -1,0 +1,10 @@
+@use "../../Assets/sass/_variables.scss" as *;
+
+.sideMenu {
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 200px;
+    padding: 10px 20px;
+    height: 500px;
+    border: 5px solid $color-black;
+  }
