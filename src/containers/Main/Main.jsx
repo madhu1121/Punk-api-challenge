@@ -1,9 +1,15 @@
-import React, {useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './Main.scss'
 
-import BeerCard from '../../components/BeerCard/BeerCard'
+import BeerCardList from '../../components/BeerCardList/BeerCardList'
 
-const Main = () => {
+const Main = (props) => {
+
+    console.log("Main props:", props);
+    console.log("main props name key", props.data);
+
+
+    // const { beerdata } = props;
 
     //   const [beerData,setBeerData] = useState(null);
 
@@ -11,7 +17,7 @@ const Main = () => {
     //     const result = await fetch('https://api.punkapi.com/v2/beers');
     //     const json = await result.json();
     //     setBeerData(json);
-        
+
     //   }
 
     //   useEffect(() => {
@@ -20,25 +26,22 @@ const Main = () => {
     //   }, []);
 
 
-    const [beerData,setBeerData] = useState(null);
-    useEffect(() => {
-      
-      fetch('https://api.punkapi.com/v2/beers')
-      .then(res => res.json())
-      .then(data => {
-        console.log("data", data);
-        setBeerData(data)
-        console.log("now data is: ",data);
-      })
-    }, [])
+
+    // const [beerData,setBeerData] = useState(null);
+    // useEffect(() => {
+
+    //   fetch('https://api.punkapi.com/v2/beers')
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     console.log("data", data);
+    //     setBeerData(data)
+    //     console.log("now data is: ",data);
+    //   })
+    // }, [])
 
     return (
         <>
-        <div className="mainSection">
-           
-        {/* {beerData && <h1>{beerData[0].name}</h1>} */}
-        {beerData && beerData.map(beer => <BeerCard data={beer} />)}
-        </div>
+            <BeerCardList data={props.data}/>
         </>
     )
 }

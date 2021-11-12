@@ -4,10 +4,12 @@ import './BeerCard.scss'
 const BeerCard = (props) => {
 
     console.log("BeerCard props : ",props);
+
+    const {image,name,tagline} = props;
     return (
     <div className="beerCard">
-        <img className="beerCard__img" src={props.data.image_url} alt="beer image"/>
-        <p className="beerCard__title">{props.data.name} : {props.data.tagline}</p>
+        <img className="beerCard__img" src={image} alt="beer image"/>
+        <p className="beerCard__title">{name} : {tagline}</p>
     </div>
     )
 }
