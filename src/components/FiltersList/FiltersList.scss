@@ -1,0 +1,22 @@
+@use "../../assets/sass/_variables.scss" as *;
+
+.FiltersListForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+
+    &__label{
+        color: $color-secondary;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // &__input{
+    //     margin-left: 10px;
+    //     color: $color-secondary;
+    //     border: 1px solid $color-secondary;
+    //     // display: inline-block;
+    //     // position: relative;
+    // }
+}

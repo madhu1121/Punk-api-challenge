@@ -8,7 +8,7 @@ const BeerCardList = (props) => {
     console.log("beer card list prop", props);
     return (
         <div className="mainSection">
-            {Array.from(props.data).map(beer => <BeerCard name={beer.name} tagline={beer.tagline} image={beer.image_url} />)}
+            {Array.from(props.data).map(beer => <BeerCard name={beer.name} tagline={beer.tagline} image={beer.image_url} id={beer.id} />)}
         </div>
     )
 }

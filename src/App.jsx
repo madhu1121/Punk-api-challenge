@@ -1,25 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import './App.scss'
-import SideMenu from './containers/SideMenu/SideMenu'
-import Main from './containers/Main/Main'
+import MainContainer from './containers/MainContainer/MainContainer';
+import { BrowserRouter as Router } from "react-router-dom";
 
 const App = () => {
-
-    // const { beerdata } = props;
-
-    //   const [beerData,setBeerData] = useState(null);
-
-    //   async function fetchAPIData() {
-    //     const result = await fetch('https://api.punkapi.com/v2/beers');
-    //     const json = await result.json();
-    //     setBeerData(json);
-
-    //   }
-
-    //   useEffect(() => {
-    //     fetchAPIData();
-    //     console.log("fetchAPIDATA is :", beerData);
-    //   }, []);
 
   const [beerData, setBeerData] = useState(null);
 
@@ -36,18 +20,11 @@ const App = () => {
 
   return (
     <>
-
+    <Router>
       <section className="section">
-        {beerData && <SideMenu data={beerData}/>}
-        {/* {beerData && <Main data={beerData} />} */}
+        {beerData && <MainContainer data={beerData}/>}
       </section>
-
-
-
-
-
-
-
+    </Router>
     </>
   )
 }

@@ -4,14 +4,14 @@ import './SearchBox.scss'
 const SearchBox = (props) => {
 
     console.log("props in searchBox:", props);
-     const {label,searchText,handleInput} = props;
+     const {searchText,handleInput} = props;
 
     return (
         <form className="sideMenu__searchbox">
             {/* <label htmlFor={label} className="sideMenu__searchbox_label">{label}</label> */}
             <input 
             type="text" 
-            name={label} 
+            name="SearchForBeer" 
             className="sideMenu__searchbox_input" 
             value={searchText} 
             onInput={handleInput}
