@@ -40,6 +40,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 This Project is hosted using Firebase : (https://console.firebase.google.com/u/0/project/punk-api-madhu/hosting/sites)
 
+Hosting URL: https://punk-api-madhu.web.app
 
 ### Features: 
 
